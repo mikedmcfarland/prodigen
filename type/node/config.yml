@@ -1,0 +1,12 @@
+#Data added globally
+metadata :
+  author : 'Mike McFarland'
+prompts :
+  - 'name'
+  - key : 'license'
+    default : 'ISC'
+  - 'description'
+cmds :
+  - 'git init'
+  - 'npm install --save-dev 6to5'
+  - 'npm install --save-dev gulp'

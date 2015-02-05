@@ -1,0 +1,15 @@
+{
+  "name": "{{name}}",
+  "version": "0.0.1",
+  "description": "{{description}}",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublish": "gulp build",
+    "build": "gulp",
+    "test": "gulp test"
+  },
+  "author": "{{author}}",
+  "devDependencies": {
+    "engulped": "git://github.com/mikedmcfarland/engulped#6to5"
+  }
+}
