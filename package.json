@@ -1,6 +1,6 @@
 {
   "name": "prodigen",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "generates projects from templates",
   "main": "./dist/index.js",
   "bin": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/mikedmcfarland/prodigen",
   "dependencies": {
     "cli-prompt": "^0.4.1",
+    "debug": "^2.1.1",
     "js-yaml": "^3.2.5",
     "lodash": "^3.1.0",
     "metalsmith": "^1.2.0",
@@ -33,7 +34,6 @@
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "6to5": "^3.3.12",
-    "debug": "^2.1.1"
+    "6to5": "^3.3.12"
   }
 }
