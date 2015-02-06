@@ -1,0 +1,67 @@
+* Prodigen
+
+  Prodign generates projects from templates
+
+** whats a template look like
+  Just a set of files and a yaml config file.
+  #+BEGIN_EXAMPLE
+    config.yml
+    src/package.json
+    src/README.md
+    src/lib/index.js
+    src/test/index.js
+  #+END_EXAMPLE
+
+** Whats the config file for
+   Well, its for configuring a few things like:
+   - setting variables within template files
+   - setting up prompts which set variables within template files
+   - running some commands after the generator finishes
+
+   it looks something like:
+   #+begin_src yaml
+     metadata :
+       author : 'Mike McFarland'         # automatically set author for templates
+     prompts :
+       - 'name'                          # prompt user for a name and set it to the value provided
+       - key : 'license'                 # ask about license (but have default be ISC)
+         default : 'ISC'
+       - 'description'
+     cmds :
+       - 'git init'
+       - 'npm install --save-dev mocha'  # install the latest mocha
+   #+end_src
+
+
+
+** Variables?
+   Yes, the files in your template directory can have parameters, like so:
+   #+begin_src javascript
+    {
+      "name": "{{name}}",
+      "description": "{{description}}",
+      "repository": "git://github.com/{{repository}}.git",
+      "version": "0.0.0",
+      "license": "{{license}}",
+      "main": "lib/index.js"
+    }
+   #+end_src
+
+   Files are run through [[http://paularmstrong.github.io/swig/][Swig]].
+
+** Installation
+
+   Its an npm module, and can be installed with
+   #+begin_example
+     npm install -g Prodigen
+   #+end_example
+
+   then you need to configure a templates directory, you can do this with
+   #+begin_example
+     prodigen -t ~/absolute/path/to/templates
+   #+end_example
+
+   I have my templates directory in version control [[https://github.com/mikedmcfarland/project-templates][here]].
+
+** License
+   ISC

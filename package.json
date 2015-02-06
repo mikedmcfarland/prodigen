@@ -1,31 +1,39 @@
 {
-  "name": "project-scaffolder",
+  "name": "prodigen",
   "version": "0.0.1",
-  "description": "generates my projects from templates",
-  "main": "build.js",
+  "description": "generates projects from templates",
+  "main": "./dist/index.js",
+  "bin": {
+    "prodigen": "./dist/cli.js"
+  },
   "scripts": {
+    "prepublish": "./build",
+    "build": "./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikedmcfarland/project-scaffolder"
+    "url": "https://github.com/mikedmcfarland/prodigen"
   },
   "author": "Michael McFarland",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikedmcfarland/project-scaffolder/issues"
+    "url": "https://github.com/mikedmcfarland/prodigen/issues"
   },
-  "homepage": "https://github.com/mikedmcfarland/project-scaffolder",
+  "homepage": "https://github.com/mikedmcfarland/prodigen",
   "dependencies": {
     "cli-prompt": "^0.4.1",
-    "consolidate": "^0.10.0",
-    "debug": "^2.1.1",
-    "engulped": "git://github.com/mikedmcfarland/engulped#6to5",
     "js-yaml": "^3.2.5",
     "lodash": "^3.1.0",
     "metalsmith": "^1.2.0",
     "metalsmith-templates": "^0.6.0",
+    "nomnom": "^1.8.1",
     "promise": "^6.1.0",
+    "shelljs": "^0.3.0",
     "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "6to5": "^3.3.12",
+    "debug": "^2.1.1"
   }
 }
