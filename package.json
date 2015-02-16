@@ -1,10 +1,10 @@
 {
-  "name": "prodigen",
-  "version": "0.0.3",
+  "name": "projgen",
+  "version": "0.0.1",
   "description": "generates projects from templates",
   "main": "./dist/index.js",
   "bin": {
-    "prodigen": "./dist/cli.js"
+    "projgen": "./dist/cli.js"
   },
   "scripts": {
     "prepublish": "./build",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikedmcfarland/prodigen"
+    "url": "https://github.com/mikedmcfarland/projgen"
   },
   "author": "Michael McFarland",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikedmcfarland/prodigen/issues"
+    "url": "https://github.com/mikedmcfarland/projgen/issues"
   },
-  "homepage": "https://github.com/mikedmcfarland/prodigen",
+  "homepage": "https://github.com/mikedmcfarland/projgen",
   "dependencies": {
     "cli-prompt": "^0.4.1",
     "debug": "^2.1.1",

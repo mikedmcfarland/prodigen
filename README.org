@@ -1,8 +1,8 @@
-* Prodigen
+* Projgen
 
-  Prodign generates projects from templates
+  Projgen generates projects from templates
 
-** whats a template look like
+** Whats a template look like
   Just a set of files and a yaml config file.
   #+BEGIN_EXAMPLE
     config.yml
@@ -53,12 +53,12 @@
 
    Its an npm module, and can be installed with
    #+begin_example
-     npm install -g Prodigen
+     npm install -g projgen
    #+end_example
 
    then you need to configure a templates directory, you can do this with
    #+begin_example
-     prodigen -t ~/absolute/path/to/templates
+     projgen -t ~/absolute/path/to/templates
    #+end_example
 
    I have my templates directory in version control [[https://github.com/mikedmcfarland/project-templates][here]].
