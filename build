@@ -1,2 +1,0 @@
-#!/bin/bash
-6to5 lib --out-dir dist --source-maps
