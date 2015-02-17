@@ -1,6 +1,6 @@
 {
   "name": "projgen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generates projects from templates",
   "main": "./dist/index.js",
   "bin": {
