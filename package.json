@@ -2,7 +2,7 @@
   "name": "projgen",
   "version": "0.0.2",
   "description": "generates projects from templates",
-  "main": "./dist/index.js",
+  "main": "./dist/generateProject.js",
   "bin": {
     "projgen": "./dist/cli.js"
   },
@@ -34,6 +34,14 @@
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "engulped": "git://github.com/mikedmcfarland/engulped#master"
+    "assert-dir-equal": "^1.0.1",
+    "engulped": "git://github.com/mikedmcfarland/engulped#master",
+    "highland": "^2.4.0",
+    "mocha": "^2.1.0",
+    "nexpect": "^0.5.0",
+    "nodemon": "^1.3.7",
+    "require-uncached": "^1.0.2",
+    "rimraf": "^2.2.8",
+    "rx": "^2.3.25"
   }
 }

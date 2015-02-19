@@ -1,1 +1,3 @@
 templates
+fixtures/build
+settings.yml

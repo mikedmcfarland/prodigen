@@ -1,0 +1,8 @@
+metadata :
+  author : 'Mike'
+prompts :
+  - 'name'
+  - key : 'license'
+    default : 'ISC'
+cmds :
+  - 'touch touched{{name}}'

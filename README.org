@@ -1,3 +1,4 @@
+#+FILETAGS: :project:
 * Projgen
 
   Projgen generates projects from templates
@@ -33,7 +34,6 @@
    #+end_src
 
 
-
 ** Variables?
    Yes, the files in your template directory can have parameters, like so:
    #+begin_src javascript
@@ -65,3 +65,10 @@
 
 ** License
    ISC
+
+** Planned
+
+*** TODO update npm docs/version
+*** TODO include screengrabs
+*** TODO add to blog :blog:
+*** TODO include templated script and filename in docs

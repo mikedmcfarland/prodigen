@@ -1,3 +1,5 @@
 node_modules
 dist
-templates
+README.md
+fixtures/build
+settings.yml

@@ -1,0 +1,3 @@
+#!/bin/sh
+npm version patch
+pandoc -s README.org -o README.md
