@@ -9,8 +9,13 @@ const requireUncached = require('require-uncached')
 
 const fixturePath = __dirname + '/../fixtures/'
 
-describe('generateProject',()=>{
-  const settings = {templateDir : fixturePath + 'templates/'}
+
+const cliPath  = __dirname + '/../dist/cli.js'
+const buildDir = fixturePath + 'build'
+const settings = {templatesDir : fixturePath + 'templates/'}
+
+describe('cli interface', () => {
+
   let util = requireUncached('../lib/util')
   beforeEach(()=> util.saveSettings(settings).then(
     ()=> util = requireUncached('../lib/util')))
@@ -18,8 +23,6 @@ describe('generateProject',()=>{
   it('generates a project that matches expected directory', function(done) {
 
     this.timeout(7000)
-    const cliPath  = __dirname + '/../dist/cli.js'
-    const buildDir = fixturePath + 'build'
     const expectedDir = fixturePath + 'expected'
 
     rimraf.sync(buildDir)
@@ -42,5 +45,19 @@ describe('generateProject',()=>{
         dirEqual(buildDir,expectedDir)
         done(err)
       })
+  })
+
+  it('-t sets template dir',function(done){
+    const templatesDirValue = __dirname
+    this.timeout(4000)
+    nexpect
+      .spawn('node', [cliPath,'-t',templatesDirValue],{
+        cwd: buildDir
+      })
+      .expect(/templatesDir: /)
+      .sendEof()
+      .run(err => util.getSettings()
+           .then(({templatesDir}) => assert.equal(templatesDir,templatesDirValue))
+           .done(()=>done(),done))
   })
 })

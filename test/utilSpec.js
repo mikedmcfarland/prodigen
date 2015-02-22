@@ -4,7 +4,7 @@ const requireUncached = require('require-uncached')
 const fixturePath = __dirname + '/../fixtures/'
 describe('utilities', ()=>{
 
-  const settings = {templateDir : fixturePath + 'templates/'}
+  const settings = {templatesDir : fixturePath + 'templates/'}
   let util = requireUncached('../lib/util')
   beforeEach(()=> util.saveSettings(settings).then(
     ()=> util = requireUncached('../lib/util')))
@@ -14,14 +14,14 @@ describe('utilities', ()=>{
      .then(s=> assert.deepEqual(s,settings)))
 
   it('saveSettings saves to config file', () =>
-     util.saveSettings({ templateDir : 'saveSettings'})
+     util.saveSettings({ templatesDir : 'saveSettings'})
      .then(util.getSettings)
-     .then(({templateDir}) => assert.equal(templateDir,'saveSettings')))
+     .then(({templatesDir}) => assert.equal(templatesDir,'saveSettings')))
 
   it('updateSettings assigns new values to config file',
-     () => util.updateSettings({templateDir:'updateSettings'})
+     () => util.updateSettings({templatesDir:'updateSettings'})
      .then(util.getSettings)
-     .then(({templateDir}) => assert.equal(templateDir,'updateSettings')))
+     .then(({templatesDir}) => assert.equal(templatesDir,'updateSettings')))
 
   it('templateTypes gets directories in template dir (sans hidden)',
      () => util.getTemplateTypes()
